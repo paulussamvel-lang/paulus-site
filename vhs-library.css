@@ -1,0 +1,82 @@
+.vhs-library{position:relative;padding:24px 0 40px;scroll-margin-top:28px}
+.library-heading{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:28px}
+.library-heading h2{font-size:clamp(32px,3vw,44px);font-weight:500;line-height:1.2;letter-spacing:-.03em}
+.library-heading p{font-size:16px;color:var(--muted);margin-bottom:4px}
+.tape-shelf{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start}
+.vhs-tape{display:block;min-width:0;color:var(--text);text-align:center;padding:8px 0 12px;cursor:pointer;border-radius:4px}
+.tape-face{display:block;position:relative;transform-origin:center;transition:transform .22s ease,opacity .22s ease}
+.tape-face img{display:block;width:100%;height:auto}
+.tape-label{position:absolute;left:6%;right:6%;top:70%;height:21%;display:flex;align-items:center;justify-content:center;color:#24231f;font-size:clamp(13px,1.3vw,17px);font-weight:600;line-height:1;letter-spacing:.015em}
+.tape-caption{display:block;font-size:13px;color:var(--muted);margin-top:8px;line-height:1.6}
+.tape-state{display:block;font-size:12px;color:var(--accent);margin-top:4px}
+.vhs-tape:hover .tape-face{transform:translateY(-8px) rotate(-2deg)}
+.vhs-tape[aria-pressed="true"] .tape-face,.vhs-tape.is-loading .tape-face{opacity:.35;transform:none}
+.vhs-tape:focus-visible{outline:2px solid var(--accent);outline-offset:8px}
+.recorder-stage{margin:16px auto 0;max-width:700px;text-align:center}
+.recorder{position:relative;width:100%;margin:auto}
+.recorder-image{display:block;width:100%;height:auto;filter:drop-shadow(0 16px 16px #0005)}
+.recorder-slot{position:absolute;left:25%;width:50%;top:43%;height:5%;pointer-events:none}
+.recorder-display{position:absolute;left:5.7%;top:64%;width:18%;text-align:center;color:#c4d1b9;font-size:clamp(8px,1vw,12px);font-weight:500;line-height:1.4;letter-spacing:.12em;white-space:nowrap}
+.recorder-status{margin:8px 0 16px;font-size:14px;color:var(--muted);min-height:24px}
+.recorder-controls{display:flex;gap:8px;align-items:center;justify-content:center}
+.recorder-controls button,.return-to-tapes{font:inherit;cursor:pointer;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:8px;min-height:44px;padding:10px 20px;font-size:13px}
+.recorder-controls button:hover,.return-to-tapes:hover{background:var(--surface);color:var(--accent)}
+.recorder-controls button:disabled{opacity:.35;cursor:default}
+.vhs-enhanced-only{display:none}
+.vhs-ready .vhs-enhanced-only{display:flex}
+.vhs-ready .playback-screen{margin-top:48px;scroll-margin-top:24px;border:1px solid #3c3e47;border-radius:16px;background:#0c0d12;overflow:clip;box-shadow:0 28px 48px #0004}
+.vhs-ready .playback-screen:not(.has-content){display:none}
+.playback-toolbar{position:sticky;top:0;z-index:5;justify-content:space-between;align-items:center;gap:24px;padding:16px 32px;background:#18191e;border-bottom:1px solid var(--line)}
+.playback-toolbar p{display:flex;align-items:center;gap:10px;font-size:14px}
+.playback-indicator{display:block;width:7px;height:7px;border-radius:50%;background:#c4d1b9}
+.return-to-tapes{border:0;padding:10px 0;color:var(--accent)}
+.vhs-ready .playback-screen>.section{width:100%;padding:48px;margin:0;scroll-margin-top:88px}
+.vhs-ready .playback-screen>.section[hidden]{display:none!important}
+.vhs-ready .playback-screen .section-heading{margin-bottom:40px}
+.vhs-ready .playback-screen .section-heading h2{font-size:clamp(28px,3vw,44px)}
+.vhs-ready .playback-screen .section-heading>p{max-width:24ch}
+.vhs-ready .playback-screen .contact{margin-bottom:0}
+.tape-flight{position:absolute;z-index:20;pointer-events:none;transform-origin:center;will-change:transform,opacity;filter:drop-shadow(0 12px 12px #0006)}
+.tape-flight .tape-label{font-size:16px}
+.vhs-ready .recorder[data-loading="true"] .recorder-display{color:var(--accent)}
+@media(max-width:900px){.tape-shelf{gap:16px}.tape-label{font-size:13px}.tape-caption{font-size:12px}.vhs-ready .playback-screen>.section{padding:32px}.vhs-ready .playback-screen .tool-project{gap:28px}}
+@media(max-width:600px){
+ .vhs-library{padding:32px 0 56px}.library-heading{display:block;margin-bottom:28px}.library-heading h2{font-size:34px}.library-heading p{font-size:14px;margin-top:16px}
+ .tape-shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px}
+ .tape-label{font-size:14px}.tape-caption{margin-top:10px}.tape-state{margin-top:4px}.recorder-stage{margin-top:24px}.recorder-status{font-size:13px;margin-top:12px}
+ .recorder-controls{gap:6px}.recorder-controls button{flex:1;padding:10px 4px;font-size:12px}.recorder-display{font-size:7px}
+ .vhs-ready .playback-screen{margin-top:28px;border-radius:12px;scroll-margin-top:12px}.playback-toolbar{padding:12px 16px;gap:12px}.playback-toolbar p{font-size:12px}.return-to-tapes{font-size:12px}
+ .vhs-ready .playback-screen>.section{padding:28px 20px}.vhs-ready .playback-screen .section-heading h2{font-size:28px}.vhs-ready .playback-screen .section-heading{margin-bottom:28px}
+ .vhs-ready .playback-screen .exhibition-art{height:360px;padding:20px 16px 8px}.vhs-ready .playback-screen .exhibition-copy{padding:20px}.vhs-ready .playback-screen .contact>a{font-size:24px}
+ .tape-flight .tape-label{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.tape-face{transition:none}.vhs-tape:hover .tape-face{transform:none}}
+
+@media(min-width:901px){.library-heading h2 br{display:none}}
+
+/* Continuous reading + a compact physical deck that follows the current chapter. */
+.console-space{position:relative}
+.vhs-console{position:relative;transform-origin:top left}
+.vhs-ready .dock-return{display:none}
+.vhs-ready .playback-screen{margin-left:0;overflow:visible}
+.vhs-ready .playback-screen>.section{border-top:1px solid var(--line);padding-block:64px;scroll-margin-top:184px}
+.vhs-ready .playback-screen>.section:first-of-type{border-top:0}
+.vhs-ready .playback-screen>.section:focus{outline:none}
+.playback-toolbar{position:relative;border-radius:16px 16px 0 0}
+.tape-flight{position:fixed;z-index:65}
+.is-docked .vhs-console{position:fixed;left:max(8px,env(safe-area-inset-left));top:max(8px,env(safe-area-inset-top));width:236px;padding:8px;display:grid;grid-template-columns:repeat(5,44px);grid-template-rows:44px 36px 44px;z-index:60;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+.is-docked .library-heading,.is-docked .tape-caption,.is-docked .tape-state{display:none}
+.vhs-ready.is-docked .dock-return{display:block;grid-column:5;grid-row:1;margin:0;padding:0;min-height:44px;border:0;color:var(--muted);font:inherit;font-size:12px;background:none;cursor:pointer}
+.is-docked .dock-return:hover{color:var(--text)}
+.is-docked .tape-shelf{grid-column:1/5;grid-row:1;grid-template-columns:repeat(4,44px);gap:0;align-items:center}
+.is-docked .vhs-tape{padding:10px 2px;min-height:44px;position:relative}
+.is-docked .vhs-tape[aria-pressed="true"]:after{content:'';position:absolute;left:16px;right:16px;bottom:3px;height:2px;background:var(--accent)}
+.is-docked .tape-label{display:none}
+.is-docked .recorder-stage{display:contents}
+.is-docked .recorder{grid-column:1/3;grid-row:2;align-self:center}
+.is-docked .recorder-display{display:none}
+.is-docked .recorder-status{grid-column:3/6;grid-row:2;font-size:12px;margin:0 0 0 8px;min-height:0;line-height:1.5;white-space:normal;text-align:left;align-self:center}
+.is-docked .recorder-controls{grid-column:1/-1;grid-row:3;gap:8px;margin:0}
+.is-docked .recorder-controls button{min-height:44px;padding:6px 4px;flex:1;font-size:12px}
+.is-docked [data-deck="play"],.is-docked [data-deck="stop"],.is-docked [data-deck="eject"]{display:none}
+@media(max-width:1000px){.vhs-ready .playback-screen>.section{padding-block:48px}}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="王浩 Paulus 的个人作品与生活记录：账号实践、自制工具、AIGC 影像，以及关于我的一些故事。">
+  <meta name="theme-color" content="#08090d">
+  <title>王浩 Paulus — 作品与生活</title>
+  <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=20261111-corner-deck">
+  <link rel="stylesheet" href="vhs-library.css?v=20261111-corner-deck">
+  <script src="vhs-library.js?v=20261111-vhs-floating" defer></script>
+  <script src="script.js?v=20261111-corner-deck" defer></script>
+  <script type="module" src="identity-scroll.js?v=20261111-vhs-floating"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="header wrap">
+  <a class="wordmark" href="#top" aria-label="Paulus，返回首页">Paulus.</a>
+  <nav aria-label="页面导航"><a href="#account">账号实践</a><a href="#tools">我的工具</a><a href="#work">AIGC 作品</a><a href="#about">关于我</a></nav>
+</header>
+<main id="main">
+  <section class="hero identity-story" id="top" aria-labelledby="name">
+    <div class="identity-stage">
+      <canvas id="identity-canvas" aria-hidden="true"></canvas>
+      <div class="hero-panel identity-intro wrap">
+        <div class="identity-bio"><h1 id="name">王浩<span lang="en">Paulus.</span></h1>
+        </div>
+        <img class="opening-ice" src="assets/identity/ice-sequence/00.webp" alt="清透冰块中冻结着小号 IP 字母" width="640" height="640" fetchpriority="high">
+      </div>
+      <div class="identity-scene identity-ip wrap">
+        <div class="identity-copy"><h2>让好的 IP，<br>被更多人看见。</h2><p>正在学习 IP 孵化与内容运营，<br>用 AI 连接想法与行动。</p>
+        </div>
+        <img class="identity-fallback ice-object" src="assets/identity/ice-sequence/00.webp" alt="透明冰体中的 IP 字母" width="640" height="640" decoding="async">
+      </div>
+      <div class="identity-scene identity-photo wrap">
+        <div class="identity-copy"><h2>王浩<br><span lang="en">Paulus.</span></h2></div>
+        <img class="portrait photo-reveal" src="assets/paulus/portrait.jpg" alt="王浩 Paulus 的个人照片，穿深蓝色西装、戴眼镜，手扶领带" width="1080" height="1080" decoding="async">
+      </div>
+      <div class="identity-footer wrap"><span class="scroll-invitation"><span>向下滚动，让 IP 转起来</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-5-5 5 5 5-5"/></svg></span><div class="identity-links"><a href="?motion=off#top">静态浏览</a><a href="#account">直接看作品</a></div></div>
+    </div>
+  </section>
+  <section class="vhs-library wrap" id="tape-library" aria-labelledby="library-title">
+    <div class="console-space"><div class="vhs-console">
+    <div class="library-heading"><h2 id="library-title">选一盘，<br>看看我的世界。</h2><p>点击选一盘，或直接向下滚动。</p></div>
+    <nav class="tape-shelf" aria-label="选择内容录像带">
+        <a class="vhs-tape" href="#account" data-tape="account" data-title="账号实践" aria-label="播放录像带：账号实践">
+          <span class="tape-face"><img src="assets/vhs/cassette.webp" width="1600" height="800" alt="" loading="lazy"><span class="tape-label">账号实践</span></span>
+          <span class="tape-caption">浩奇工具库</span><span class="tape-state" aria-hidden="true">点击播放</span>
+        </a>
+        <a class="vhs-tape" href="#tools" data-tape="tools" data-title="我的工具" aria-label="播放录像带：我的工具">
+          <span class="tape-face"><img src="assets/vhs/cassette.webp" width="1600" height="800" alt="" loading="lazy"><span class="tape-label">我的工具</span></span>
+          <span class="tape-caption">从问题到工具</span><span class="tape-state" aria-hidden="true">点击播放</span>
+        </a>
+        <a class="vhs-tape" href="#work" data-tape="work" data-title="AIGC 作品" aria-label="播放录像带：AIGC 作品">
+          <span class="tape-face"><img src="assets/vhs/cassette.webp" width="1600" height="800" alt="" loading="lazy"><span class="tape-label">AIGC 作品</span></span>
+          <span class="tape-caption">神臂弓 · 角色与场景</span><span class="tape-state" aria-hidden="true">点击播放</span>
+        </a>
+        <a class="vhs-tape" href="#about" data-tape="about" data-title="关于我" aria-label="播放录像带：关于我">
+          <span class="tape-face"><img src="assets/vhs/cassette.webp" width="1600" height="800" alt="" loading="lazy"><span class="tape-label">关于我</span></span>
+          <span class="tape-caption">经历、活动与生活</span><span class="tape-state" aria-hidden="true">点击播放</span>
+        </a>
+    </nav>
+    <button type="button" class="dock-return vhs-enhanced-only" aria-label="返回录像带架" title="返回录像带架">带架</button>
+    <div class="recorder-stage">
+      <div class="recorder">
+        <img class="recorder-image" src="assets/vhs/recorder.webp" width="1600" height="533" alt="经典 VHS 录像机" loading="lazy">
+        <span class="recorder-slot" aria-hidden="true"></span>
+        <span class="recorder-display" aria-hidden="true">READY</span>
+      </div>
+      <p class="recorder-status" role="status" aria-live="polite" aria-atomic="true">向下浏览，录像带会跟随内容自动切换。</p>
+      <div class="recorder-controls vhs-enhanced-only" role="group" aria-label="录像机控制">
+        <button type="button" data-deck="previous" aria-label="播放上一盘录像带">上一盘</button>
+        <button type="button" data-deck="play">继续联动</button>
+        <button type="button" data-deck="stop">暂停联动</button>
+        <button type="button" data-deck="next" aria-label="播放下一盘录像带">下一盘</button>
+        <button type="button" data-deck="eject">回到带架</button>
+      </div>
+    </div>
+    </div></div>
+    <div class="playback-screen" id="tape-screen" role="region" aria-label="录像带内容播放区" tabindex="-1">
+      <div class="playback-toolbar vhs-enhanced-only"><p><span class="playback-indicator" aria-hidden="true"></span><span class="playback-title">向下浏览</span></p><button type="button" class="return-to-tapes">换一盘录像带<span aria-hidden="true"> ↑</span></button></div>
+  <section class="account wrap section" id="account" aria-labelledby="account-title">
+    <div class="section-heading"><h2 id="account-title">我的账号实践</h2><p>把学习，放进自己的账号里。</p></div>
+    <div class="account-layout">
+      <div class="account-copy"><h3>浩奇工具库</h3><p class="account-platform">抖音 · AI 工具分享</p><p>这是我自己的自媒体账号。我在这里分享 AI 工具与使用方法，也用自己的内容练习选题、脚本、画面制作和发布。</p><p>目前仍在学习与积累阶段，希望把每一次尝试整理成可以复用的方法，逐步走通内容制作与账号运营的全过程。</p></div>
+      <figure><a href="assets/account/haoqi-account-20261110.png" aria-label="查看 浩奇工具库账号截图"><img src="assets/account/haoqi-account-20261110.png" alt="浩奇工具库抖音账号页面及已发布的 AI 工具分享内容" loading="lazy" width="1595" height="847"></a><figcaption>我的内容实践<span>账号页面记录 · 点击查看大图</span></figcaption></figure>
+    </div>
+  </section>
+  <section class="tools-section wrap section" id="tools" aria-labelledby="tools-title">
+    <div class="section-heading"><h2 id="tools-title">我的工具</h2><p>把遇到的问题，做成顺手的工具。</p></div>
+    <p class="tools-intro">围绕看盘、口播录制、提示词整理和素材下载，我尝试把自己的使用需求做成工具。从提出问题，到调整界面和功能，在实际使用中一点点改进。</p>
+    <article class="tool-project" aria-labelledby="stockdesk-title">
+      <div class="tool-copy"><h3 id="stockdesk-title">知行合一看板</h3><p class="tool-purpose">让分散的行情信息，集中在一屏。</p><p>把日线、周线、成交量与多组指标放到同一界面，方便切换标的、对照图表，形成适合自己观察习惯的看盘布局。</p><ul class="tool-features"><li>日线与周线对照</li><li>KDJ、MACD 等指标副图</li><li>标的切换与行情展示</li></ul></div>
+      <figure class="tool-shot"><a href="assets/tools/stockdesk.jpg" aria-label="查看知行合一看板完整截图"><img src="assets/tools/stockdesk.jpg" alt="知行合一看板运行界面，包含 K 线、成交量、指标副图及周线图" loading="lazy" width="1280" height="720"></a><figcaption>行情图表与指标布局<span>运行截图 · 点击查看大图</span></figcaption></figure>
+    </article>
+    <article class="tool-project" aria-labelledby="prompter-title">
+      <div class="tool-copy"><h3 id="prompter-title">口播提词器</h3><p class="tool-purpose">让录制时的注意力，回到表达上。</p><p>粘贴文稿后自动断行，突出显示当前句子。可以手动推进，也可以设置每隔几秒翻到下一行，配合自己的口播节奏。</p><ul class="tool-features"><li>自动断行与当前句高亮</li><li>可调定时翻行、键盘控制</li><li>语音跟读模式</li></ul></div>
+      <figure class="tool-shot"><a href="assets/tools/prompter.png" aria-label="查看口播提词器完整截图"><img src="assets/tools/prompter.png" alt="口播提词器展示王浩的自我介绍示例，当前句高亮，下方显示翻行按钮和进度" loading="lazy" width="1280" height="720"></a><figcaption>口播文稿的阅读与推进<span>功能演示截图 · 点击查看大图</span></figcaption></figure>
+    </article>
+    <article class="tool-project" aria-labelledby="prompt-tool-title">
+      <div class="tool-copy"><h3 id="prompt-tool-title">多模型提示词工坊</h3><p class="tool-purpose">把画面想法，整理成清晰的描述。</p><p>按主体、环境、光线等元素拆分画面描述，再按目标模型整理提示词。结合风格选择、模板与历史记录，减少反复整理的步骤。</p><ul class="tool-features"><li>画面元素分类与规则整理</li><li>SDXL、Krea 2、MiniMax H3 格式</li><li>风格选择、模板与历史记录</li></ul></div>
+      <figure class="tool-shot"><a href="assets/tools/prompt-atelier.png" aria-label="查看多模型提示词工坊完整截图"><img src="assets/tools/prompt-atelier.png" alt="多模型提示词工坊的实际结果：原始画面描述、分类解析，以及整理后的正向和反向提示词" loading="lazy" width="1280" height="1317"></a><figcaption>从画面描述，到结构化结果<span>功能演示截图 · 点击查看大图</span></figcaption></figure>
+    </article>
+    <article class="tool-project" id="douyin-downloader" aria-labelledby="douyin-downloader-title">
+      <div class="tool-copy"><h3 id="douyin-downloader-title">抖音下载助手</h3><p class="tool-purpose">切换了视频，下载也要跟上。</p><p>使用现有插件时，我遇到过切换视频后，下载面板仍指向上一条作品的问题。我借助 AI 定位识别逻辑，调整当前视频的判断顺序，让面板跟随正在看的内容。</p><ul class="tool-features"><li>优先识别当前弹窗中的视频</li><li>保留原有画质与格式选择</li><li>整理成可复用的独立修复工具</li></ul><p class="tool-credit">基于 snowflake-hangdudu 的插件进行修复实践。</p></div>
+      <figure class="tool-shot tool-shot-compact"><a href="assets/tools/douyin-downloader.png" aria-label="查看抖音下载助手修复版界面"><img src="assets/tools/douyin-downloader.png" alt="抖音视频下载助手1.1.2修复版实际界面，显示当前作品、清晰度、MP4格式和已保存状态" loading="lazy" width="408" height="489"></a><figcaption>让下载跟随当前作品<span>修复版运行截图 · 点击查看大图</span></figcaption></figure>
+    </article>
+  </section>
+  <section class="work wrap section" id="work" aria-labelledby="work-title">
+    <div class="section-heading"><h2 id="work-title">AIGC 作品</h2><p>从一个角色，到一段故事。</p></div>
+    <article aria-labelledby="shenbigong-title">
+      <div class="project-heading"><h3 id="shenbigong-title">《神臂弓》</h3><p>AI 漫剧制作记录 · 第一集</p></div>
+      <div class="character-gallery">
+        <figure><a href="assets/shenbigong/zheng-xin-red.png"><img src="assets/shenbigong/zheng-xin-red.png" alt="《神臂弓》郑信角色定妆照，身穿红色内衬的金纹长袍" loading="lazy" width="1086" height="1448"></a><figcaption>郑信<span>角色定妆</span></figcaption></figure>
+        <figure><a href="assets/shenbigong/zhang-junqing-young.png"><img src="assets/shenbigong/zhang-junqing-young.png" class="young-portrait" alt="《神臂弓》张俊卿年轻时的角色定妆照" loading="lazy" width="720" height="900"></a><figcaption>张俊卿<span>角色定妆</span></figcaption></figure>
+        <figure><a href="assets/shenbigong/zhang-mother.jpg"><img src="assets/shenbigong/zhang-mother.jpg" alt="《神臂弓》张母角色定妆照" loading="lazy" width="720" height="900"></a><figcaption>张母<span>角色定妆</span></figcaption></figure>
+        <figure><a href="assets/shenbigong/dongyue-monk.jpg"><img src="assets/shenbigong/dongyue-monk.jpg" alt="《神臂弓》东岳和尚角色定妆照" loading="lazy" width="720" height="900"></a><figcaption>东岳和尚<span>角色定妆</span></figcaption></figure>
+      </div>
+      <div class="film-layout">
+        <div class="film-copy"><h3>场景设计</h3><p>张宅正房的晨光，东岳寺山亭的飞瀑。两张场景图记录了项目中的空间与光线探索。</p></div>
+        <div class="film-gallery">
+          <figure><a href="assets/shenbigong/zhang-residence.jpg"><img src="assets/shenbigong/zhang-residence.jpg" alt="张宅正房场景，晨光穿过木窗照入室内" loading="lazy" width="941" height="1672"></a><figcaption>张宅正房<span>晨光</span></figcaption></figure>
+          <figure><a href="assets/shenbigong/dongyue-pavilion.jpg"><img src="assets/shenbigong/dongyue-pavilion.jpg" alt="东岳寺山亭场景，山间亭台与峡谷飞瀑" loading="lazy" width="941" height="1672"></a><figcaption>东岳寺山亭<span>日景</span></figcaption></figure>
+        </div>
+      </div>
+    </article>
+  </section>
+  <section class="about wrap section" id="about" aria-labelledby="about-title">
+    <div class="section-heading"><h2 id="about-title">关于我</h2><p>作品之外，还有生活。</p></div>
+    <div class="about-intro"><h3>慢热，爱观察。<br>熟悉以后，也爱张罗。</h3><div><p>我是王浩，也叫 Paulus，来自天津，毕业于云南大学国际贸易专业。刚认识时，我通常先听、先观察；遇到有趣的事，又总想分享给身边的人。</p><p>我喜欢音乐、动漫和骑车，偶尔带孩子出门旅行。比起记录每一刻，我更喜欢投入当下，也乐意花时间把一件新鲜事学明白。</p></div></div>
+    <section class="activity-story" id="activities" aria-labelledby="activities-title">
+    <div class="life-heading"><h3 id="activities-title">青年活动与志愿参与</h3><div><p>以前，我和几位伙伴一起组织青年团体，每月策划一两场活动。从十几人的小聚，到三四十人的相聚，留下了许多热闹的回忆。</p><p>活动里有户外游戏、团队协作，也有养老院探访与陪伴互动。这些照片，记录了我们一起参与、一起做事的时刻。</p></div></div>
+    <div class="activity-gallery">
+      <figure><a href="assets/youth/outdoor-activity.jpg"><img src="assets/youth/outdoor-activity.jpg" alt="青年活动中的伙伴们在户外一起参与互动游戏" loading="lazy" width="1400" height="1050"></a><figcaption>在游戏里，拉近彼此。<span>户外互动 · 青年团体活动</span></figcaption></figure>
+      <figure class="activity-tall"><a href="assets/youth/indoor-activity.jpg"><img src="assets/youth/indoor-activity.jpg" alt="伙伴们手拉手完成室内团队协作游戏" loading="lazy" width="1050" height="1400"></a><figcaption>一起想办法，一起完成。<span>团队协作 · 室内互动</span></figcaption></figure>
+      <figure><a href="assets/youth/care-home-visit.jpg"><img src="assets/youth/care-home-visit.jpg" alt="养老院探访活动中，伙伴们在餐桌旁相聚的记录" loading="lazy" width="1280" height="960"></a><figcaption>把时间留给相聚与陪伴。<span>养老院探访 · 活动记录</span></figcaption></figure>
+      <figure class="activity-tall"><a href="assets/youth/companionship-activity.jpg"><img src="assets/youth/companionship-activity.jpg" alt="挂满彩色气球的活动室里，伙伴们与孩子们围桌互动" loading="lazy" width="640" height="854"></a><figcaption>在一起，就是温暖的时刻。<span>陪伴互动 · 志愿活动</span></figcaption></figure>
+    </div>
+    </section>
+    <div class="experience-layout"><figure><a href="assets/paulus/barista.jpg"><img src="assets/paulus/barista.jpg" alt="王浩在咖啡师工作期间制作手冲咖啡" loading="lazy" width="1080" height="1440"></a><figcaption>一杯咖啡，也值得认真对待。<span>咖啡师工作旧照</span></figcaption></figure><div class="experience-copy"><h3>换过工作，<br>也一直在学新的本事。</h3><p>我做过隧道运营养护、咖啡师、会计和保险销售，也负责过公司财务对接。不同的工作，让我接触了不同的人和做事方式。</p><p>现在，我把更多精力放在 AI 工具分享和视频创作上。一边学，一边做，希望把每一次尝试，慢慢积累成拿得出手的作品。</p><figure><a href="assets/paulus/tunnel.jpg"><img src="assets/paulus/tunnel.jpg" alt="隧道运营工作期间的监控室旧照" loading="lazy" width="1400" height="753"></a><figcaption>另一段工作经历。<span>隧道运营工作旧照</span></figcaption></figure></div></div>
+    <div class="contact"><p>关于作品，或一个有趣的新想法，欢迎联系。</p><a href="tel:13821807142">138 2180 7142</a></div>
+  </section>
+    </div>
+  </section>
+</main>
+<footer class="footer wrap"><span>© <span id="year">2026</span> 王浩 Paulus</span><a href="#top">回到顶部</a></footer>
+</body>
+</html>
