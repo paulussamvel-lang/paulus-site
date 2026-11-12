@@ -12,7 +12,7 @@ output = Path('_site')
 def prepare(item):
     name, expected = item
     local = Path(name)
-    if name.startswith('assets/'):
+    if name.startswith('assets/') and not local.is_file():
         request = urllib.request.Request(origin + name, headers={'User-Agent': 'Paulus-Portfolio-Publisher/1.0'})
         with urllib.request.urlopen(request, timeout=60) as response:
             data = response.read()

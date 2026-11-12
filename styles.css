@@ -165,3 +165,4 @@ body>.header{position:absolute;left:0;right:0;top:0;z-index:10}
 .lightbox-stage img.young-portrait{width:min(47svh,calc(100vw - 64px));height:auto;aspect-ratio:520/841;object-fit:cover;object-position:left}
 
 .tool-shot-compact{width:min(100%,408px);justify-self:center}.tool-copy .tool-credit{font-size:13px;color:var(--muted)}
+.tool-copy .tool-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:24px}.tool-links a{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);text-decoration:underline;text-underline-offset:5px}.tool-links a:hover{color:var(--text)}
