@@ -166,3 +166,7 @@ body>.header{position:absolute;left:0;right:0;top:0;z-index:10}
 
 .tool-shot-compact{width:min(100%,408px);justify-self:center}.tool-copy .tool-credit{font-size:13px;color:var(--muted)}
 .tool-copy .tool-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:24px}.tool-links a{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);text-decoration:underline;text-underline-offset:5px}.tool-links a:hover{color:var(--text)}
+
+/* Preserve the supplied screenshot pixels; clip only the rounded window corners. */
+#zhenxia .tool-shot a{background:transparent;border-radius:0;overflow:visible}
+#zhenxia .tool-shot img{clip-path:inset(0 round 3.7% / 4.85%);border-radius:0}
