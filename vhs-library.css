@@ -80,3 +80,23 @@
 .is-docked .recorder-controls button{min-height:44px;padding:6px 4px;flex:1;font-size:12px}
 .is-docked [data-deck="play"],.is-docked [data-deck="stop"],.is-docked [data-deck="eject"]{display:none}
 @media(max-width:1000px){.vhs-ready .playback-screen>.section{padding-block:48px}}
+
+/* Mobile keeps the VHS navigation available without a persistent open panel. */
+.dock-toggle{display:none}
+.vhs-ready .playback-screen .section-heading>p{max-width:none;text-wrap:balance}
+@media(max-width:600px){
+ .is-docked .vhs-console{top:auto;bottom:max(8px,env(safe-area-inset-bottom));grid-template-rows:48px;padding:0 8px;width:236px}
+ .is-docked .dock-toggle{display:flex;grid-column:1/-1;grid-row:1;align-items:center;gap:10px;width:100%;min-width:0;height:48px;padding:0;border:0;background:none;color:var(--text);font-size:13px;cursor:pointer;text-align:left}
+ .dock-toggle img{width:40px;height:20px;object-fit:contain;flex:none}
+ .dock-current{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .dock-toggle-action{color:var(--muted);font-size:12px}
+ .dock-toggle svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;flex:none}
+ .is-docked:not(.is-mobile-open) .tape-shelf,.is-docked:not(.is-mobile-open) .dock-return,.is-docked:not(.is-mobile-open) .recorder-stage{display:none}
+ .is-docked.is-mobile-open .vhs-console{grid-template-rows:48px 44px 36px 44px;padding-bottom:8px}
+ .is-docked.is-mobile-open .tape-shelf,.is-docked.is-mobile-open .dock-return{grid-row:2}
+ .is-docked.is-mobile-open .recorder,.is-docked.is-mobile-open .recorder-status{grid-row:3}
+ .is-docked.is-mobile-open .recorder-controls{grid-row:4}
+ .is-mobile-open .dock-toggle svg{transform:rotate(180deg)}
+ .vhs-ready .playback-screen>.section{scroll-margin-top:28px}
+ .vhs-ready .playback-screen{padding-bottom:72px}
+}

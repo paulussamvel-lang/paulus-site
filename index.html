@@ -7,11 +7,13 @@
   <meta name="theme-color" content="#08090d">
   <title>王浩 Paulus — 作品与生活</title>
   <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261115-zhenxia-corners">
-  <link rel="stylesheet" href="vhs-library.css?v=20261111-corner-deck">
-  <script src="vhs-library.js?v=20261111-vhs-floating" defer></script>
+  <link rel="stylesheet" href="styles.css?v=unslop-complete">
+  <link rel="stylesheet" href="vhs-library.css?v=unslop-complete">
+  <link rel="stylesheet" href="tools-showcase.css?v=unslop-complete">
+  <script src="vhs-library.js?v=unslop-complete" defer></script>
   <script src="script.js?v=20261111-corner-deck" defer></script>
   <script type="module" src="identity-scroll.js?v=20261111-vhs-floating"></script>
+  <link rel="stylesheet" href="color-test.css">
 </head>
 <body>
 <a class="skip" href="#main">跳到主要内容</a>
@@ -25,6 +27,7 @@
       <canvas id="identity-canvas" aria-hidden="true"></canvas>
       <div class="hero-panel identity-intro wrap">
         <div class="identity-bio"><h1 id="name">王浩<span lang="en">Paulus.</span></h1>
+          <p class="identity-summary">我分享 AI 工具的用法，也做自己的工具和短片。</p>
         </div>
         <img class="opening-ice" src="assets/identity/ice-sequence/00.webp" alt="清透冰块中冻结着小号 IP 字母" width="640" height="640" fetchpriority="high">
       </div>
@@ -37,7 +40,7 @@
         <div class="identity-copy"><h2>王浩<br><span lang="en">Paulus.</span></h2></div>
         <img class="portrait photo-reveal" src="assets/paulus/portrait-relaxed-20261115.jpg" alt="王浩 Paulus 的个人照片，戴眼镜、穿深蓝色休闲外套，托腮微笑" width="1254" height="1254" decoding="async">
       </div>
-      <div class="identity-footer wrap"><span class="scroll-invitation"><span>向下滚动，让 IP 转起来</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-5-5 5 5 5-5"/></svg></span><div class="identity-links"><a href="?motion=off#top">静态浏览</a><a href="#account">直接看作品</a></div></div>
+      <div class="identity-footer wrap"><span class="scroll-invitation"><span>向下滚动，让 IP 转起来</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-5-5 5 5 5-5"/></svg></span><div class="identity-links"><a href="?motion=off#top">静态浏览</a><a class="identity-primary" href="#work">直接看作品</a></div></div>
     </div>
   </section>
   <section class="vhs-library wrap" id="tape-library" aria-labelledby="library-title">
@@ -90,29 +93,29 @@
   <section class="tools-section wrap section" id="tools" aria-labelledby="tools-title">
     <div class="section-heading"><h2 id="tools-title">我的工具</h2><p>把遇到的问题，做成顺手的工具。</p></div>
     <p class="tools-intro">围绕截图录屏、内容整理、口播录制和日常使用，我尝试把自己的使用需求做成工具。从提出问题，到调整界面和功能，在实际使用中一点点改进。</p>
-    <article class="tool-project" id="zhenxia" aria-labelledby="zhenxia-title">
-      <div class="tool-copy"><h3 id="zhenxia-title">帧匣 ZhenXia</h3><p class="tool-purpose">截图、录屏和暂存，放在一起。</p><p>我基于 DropKit 调整截图、录屏和文件暂存的使用流程，整理成帧匣。截图完成后面板自动出现，录制时隐藏；素材可以继续标注、裁切，或从暂存架拖到需要的位置。</p><ul class="tool-features"><li>全屏、区域截图与录屏</li><li>高亮、箭头与方框标注</li><li>片段裁切与常驻文件暂存</li></ul><p class="tool-links"><a href="https://github.com/paulussamvel-lang/zhenxia">查看项目与下载</a></p><p class="tool-credit">基于 chenyuxiaojin/DropKit（MIT）改进，保留原作者署名。</p></div>
-      <figure class="tool-shot tool-shot-compact"><a href="assets/tools/zhenxia-panel-20261115.html" aria-label="查看帧匣完整界面截图"><img src="assets/tools/zhenxia-panel-20261115.png" alt="帧匣实际界面，包含区域截图、全屏截图、全屏录屏、区域录屏、系统声音和最近文件暂存架" loading="lazy" width="489" height="374"></a><figcaption>截下来，标清楚，随手带走<span>帧匣实际界面 · 点击查看大图</span></figcaption></figure>
+    <article class="tool-project tool-featured" id="zhenxia" aria-labelledby="zhenxia-title">
+      <header class="tool-featured-heading"><div class="tool-featured-title"><h3 id="zhenxia-title">帧匣 ZhenXia</h3><p class="tool-purpose">截图、录屏和暂存，放在一起。</p></div><p class="tool-links"><a href="https://github.com/paulussamvel-lang/zhenxia">查看项目与下载</a></p></header>
+      <div class="tool-featured-body"><figure class="tool-shot tool-shot-compact"><a href="assets/tools/zhenxia-panel-20261115.html" aria-label="查看帧匣完整界面截图"><span class="tool-crop tool-crop-panel" style="--crop-ratio:489/150;--shot-width:1.000000;--shot-x:0.000%;--shot-y:0.000%"><img src="assets/tools/zhenxia-panel-20261115.png" alt="帧匣面板的截屏、录屏与系统声音操作" loading="lazy" width="489" height="374"></span></a><figcaption>截下来，标清楚，随手带走<span>帧匣实际界面 · 点击查看大图</span></figcaption></figure><div class="tool-featured-notes"><ul class="tool-features"><li>全屏、区域截图与录屏</li><li>高亮、箭头与方框标注</li><li>片段裁切与常驻文件暂存</li></ul><details class="tool-details"><summary>制作与改动说明</summary><div><p>我基于 DropKit 调整截图、录屏和文件暂存的使用流程，整理成帧匣。截图完成后面板自动出现，录制时隐藏；素材可以继续标注、裁切，或从暂存架拖到需要的位置。</p></div></details><p class="tool-credit">基于 chenyuxiaojin/DropKit（MIT）改进，保留原作者署名。</p></div></div>
     </article>
-    <article class="tool-project" id="paul-workbench" aria-labelledby="paul-workbench-title">
-      <div class="tool-copy"><h3 id="paul-workbench-title">Paul 工作台</h3><p class="tool-purpose">把素材、文稿和配音，放在同一张工作台。</p><p>基于 Lulu，我围绕自己的视频创作流程调整界面和文稿操作。把内容提取、本地转录、候选文案对比与组稿放到一起，并补充 Agent CLI，让已有文稿能进入候选列表。</p><ul class="tool-features"><li>素材提取、本地转录与配音</li><li>候选文案对比、精选片段与组稿</li><li>Agent CLI 添加与查询候选文案</li></ul><p class="tool-links"><a href="https://github.com/paulussamvel-lang/Lulu">查看开源代码与使用说明</a></p><p class="tool-credit">基于 AidenXu-1/Lulu（MIT）改进，保留原作者与第三方许可。</p></div>
-      <figure class="tool-shot"><a href="assets/tools/paul-workbench-20261115.jpg" aria-label="查看Paul工作台完整界面截图"><img src="assets/tools/paul-workbench-20261115.jpg" alt="Paul工作台文稿库与写作助手界面，使用演示文稿展示文稿阅读、整理和助手入口" loading="lazy" width="1480" height="940"></a><figcaption>从素材到文稿，在一处整理<span>文稿库与写作助手 · 界面展示</span></figcaption></figure>
+    <article class="tool-project tool-featured" id="paul-workbench" aria-labelledby="paul-workbench-title">
+      <header class="tool-featured-heading"><div class="tool-featured-title"><h3 id="paul-workbench-title">Paul 工作台</h3><p class="tool-purpose">把素材、文稿和配音，放在<span class="keep-phrase">同一张工作台。</span></p></div><p class="tool-links"><a href="https://github.com/paulussamvel-lang/Lulu">查看开源代码与使用说明</a></p></header>
+      <div class="tool-featured-body"><figure class="tool-shot"><a href="assets/tools/paul-workbench-20261115.jpg" aria-label="查看Paul工作台完整界面截图"><span class="tool-crop tool-crop-workbench" style="--crop-ratio:880/500;--shot-width:1.681818;--shot-x:-39.189%;--shot-y:-10.638%"><img src="assets/tools/paul-workbench-20261115.jpg" alt="Paul 工作台的文稿编辑区和右侧写作助手" loading="lazy" width="1480" height="940"></span></a><figcaption>从素材到文稿，在一处整理<span>文稿库与写作助手 · 界面展示</span></figcaption></figure><div class="tool-featured-notes"><ul class="tool-features"><li>素材提取、本地转录与配音</li><li>候选文案对比、精选片段与组稿</li><li>Agent CLI 添加与查询候选文案</li></ul><details class="tool-details"><summary>制作与改动说明</summary><div><p>基于 Lulu，我围绕自己的视频创作流程调整界面和文稿操作。把内容提取、本地转录、候选文案对比与组稿放到一起，并补充 Agent CLI，让已有文稿能进入候选列表。</p></div></details><p class="tool-credit">基于 AidenXu-1/Lulu（MIT）改进，保留原作者与第三方许可。</p></div></div>
     </article>
-    <article class="tool-project" aria-labelledby="stockdesk-title">
-      <div class="tool-copy"><h3 id="stockdesk-title">知行合一看板</h3><p class="tool-purpose">让分散的行情信息，集中在一屏。</p><p>把日线、周线、成交量与多组指标放到同一界面，方便切换标的、对照图表，形成适合自己观察习惯的看盘布局。</p><ul class="tool-features"><li>日线与周线对照</li><li>KDJ、MACD 等指标副图</li><li>标的切换与行情展示</li></ul></div>
-      <figure class="tool-shot"><a href="assets/tools/stockdesk.jpg" aria-label="查看知行合一看板完整截图"><img src="assets/tools/stockdesk.jpg" alt="知行合一看板运行界面，包含 K 线、成交量、指标副图及周线图" loading="lazy" width="1280" height="720"></a><figcaption>行情图表与指标布局<span>运行截图 · 点击查看大图</span></figcaption></figure>
+    <article class="tool-project tool-index" aria-labelledby="stockdesk-title">
+      <div class="tool-index-copy"><h3 id="stockdesk-title">知行合一看板</h3><p class="tool-purpose">让分散的行情信息，集中在一屏。</p><details class="tool-details"><summary>功能与制作说明</summary><div><p>把日线、周线、成交量与多组指标放到同一界面，方便切换标的、对照图表，形成适合自己观察习惯的看盘布局。</p><ul class="tool-features"><li>日线与周线对照</li><li>KDJ、MACD 等指标副图</li><li>标的切换与行情展示</li></ul></div></details></div>
+      <figure class="tool-shot"><a href="assets/tools/stockdesk.jpg" aria-label="查看知行合一看板完整截图"><span class="tool-crop tool-crop-stockdesk" style="--crop-ratio:704/391;--shot-width:1.818182;--shot-x:-18.828%;--shot-y:-7.500%"><img src="assets/tools/stockdesk.jpg" alt="知行合一看板的主 K 线图和成交量" loading="lazy" width="1280" height="720"></span></a><figcaption>行情图表与指标布局<span>运行截图 · 点击查看大图</span></figcaption></figure>
     </article>
-    <article class="tool-project" aria-labelledby="prompter-title">
-      <div class="tool-copy"><h3 id="prompter-title">大字提词器</h3><p class="tool-purpose">长句分成短行，按自己的节奏读。</p><p>粘贴文稿后，按每行 10 个字整理长句，行末的句号、逗号等标点跟随上一行。保留原文段落和空行，放大后用手指上下拖动，修改文稿后也能回到刚才的阅读位置。</p><ul class="tool-features"><li>10 字分行，行末标点跟随</li><li>大字显示，手动触摸滚动</li><li>单文件交付，下载后可离线使用</li></ul><p class="tool-links"><a href="https://paulussamvel-lang.github.io/chinese-teleprompter/prompter.html">打开大字提词器</a><a href="https://github.com/paulussamvel-lang/chinese-teleprompter">查看开源代码</a></p></div>
-      <figure class="tool-shot"><a href="assets/tools/prompter-lines-20261112.webp" aria-label="查看大字提词器完整截图"><img src="assets/tools/prompter-lines-20261112.webp" alt="大字提词器实际界面：把遇到的问题做成作品共10字，句号留在同一行，长句分行并保留段落空行" loading="lazy" width="1542" height="693"></a><figcaption>长句分行，标点跟随<span>10 字分行版 · 点击查看大图</span></figcaption></figure>
+    <article class="tool-project tool-index" aria-labelledby="prompter-title">
+      <div class="tool-index-copy"><h3 id="prompter-title">大字提词器</h3><p class="tool-purpose">长句分成短行，按自己的节奏读。</p><p class="tool-links"><a href="https://paulussamvel-lang.github.io/chinese-teleprompter/prompter.html">打开大字提词器</a><a href="https://github.com/paulussamvel-lang/chinese-teleprompter">查看开源代码</a></p><details class="tool-details"><summary>功能与制作说明</summary><div><p>粘贴文稿后，按每行 10 个字整理长句，行末的句号、逗号等标点跟随上一行。保留原文段落和空行，放大后用手指上下拖动，修改文稿后也能回到刚才的阅读位置。</p><ul class="tool-features"><li>10 字分行，行末标点跟随</li><li>大字显示，手动触摸滚动</li><li>单文件交付，下载后可离线使用</li></ul></div></details></div>
+      <figure class="tool-shot"><a href="assets/tools/prompter-lines-20261112.webp" aria-label="查看大字提词器完整截图"><span class="tool-crop tool-crop-prompter" style="--crop-ratio:650/360;--shot-width:2.372308;--shot-x:-28.534%;--shot-y:-13.131%"><img src="assets/tools/prompter-lines-20261112.webp" alt="大字提词器的短行和跟随行末的标点" loading="lazy" width="1542" height="693"></span></a><figcaption>长句分行，标点跟随<span>10 字分行版 · 点击查看大图</span></figcaption></figure>
     </article>
-    <article class="tool-project" aria-labelledby="prompt-tool-title">
-      <div class="tool-copy"><h3 id="prompt-tool-title">多模型提示词工坊</h3><p class="tool-purpose">把画面想法，整理成清晰的描述。</p><p>输入中文画面描述，用本地词典、规则和模板整理不同模型的提示词。支持 SDXL、Pony、Krea 2 和 MiniMax H3，输出可以继续编辑，再复制或下载。</p><ul class="tool-features"><li>本地运行，无需 API Key</li><li>Krea 2 七层自定义模板、H3 基础字段</li><li>风格选择与最近 12 条历史记录</li></ul><p class="tool-links"><a href="https://github.com/paulussamvel-lang/prompt-atelier">查看开源代码与使用说明</a></p><p class="tool-credit">已采用 MIT 许可证开源。</p></div>
-      <figure class="tool-shot"><a href="assets/tools/prompt-atelier.png" aria-label="查看多模型提示词工坊完整截图"><img src="assets/tools/prompt-atelier.png" alt="多模型提示词工坊的实际结果：原始画面描述、分类解析，以及整理后的正向和反向提示词" loading="lazy" width="1280" height="1317"></a><figcaption>从画面描述，到结构化结果<span>功能演示截图 · 点击查看大图</span></figcaption></figure>
+    <article class="tool-project tool-index" aria-labelledby="prompt-tool-title">
+      <div class="tool-index-copy"><h3 id="prompt-tool-title">多模型提示词工坊</h3><p class="tool-purpose">把画面想法，整理成清晰的描述。</p><p class="tool-links"><a href="https://github.com/paulussamvel-lang/prompt-atelier">查看开源代码与使用说明</a></p><details class="tool-details"><summary>功能与制作说明</summary><div><p>输入中文画面描述，用本地词典、规则和模板整理不同模型的提示词。支持 SDXL、Pony、Krea 2 和 MiniMax H3，输出可以继续编辑，再复制或下载。</p><ul class="tool-features"><li>本地运行，无需 API Key</li><li>Krea 2 七层自定义模板、H3 基础字段</li><li>风格选择与最近 12 条历史记录</li></ul></div></details><p class="tool-credit">已采用 MIT 许可证开源。</p></div>
+      <figure class="tool-shot"><a href="assets/tools/prompt-atelier.png" aria-label="查看多模型提示词工坊完整截图"><span class="tool-crop tool-crop-prompt" style="--crop-ratio:728/352;--shot-width:1.758242;--shot-x:-20.625%;--shot-y:-70.843%"><img src="assets/tools/prompt-atelier.png" alt="提示词工坊生成的正向与反向提示词" loading="lazy" width="1280" height="1317"></span></a><figcaption>从画面描述，到结构化结果<span>功能演示截图 · 点击查看大图</span></figcaption></figure>
     </article>
-    <article class="tool-project" id="douyin-downloader" aria-labelledby="douyin-downloader-title">
-      <div class="tool-copy"><h3 id="douyin-downloader-title">抖音下载助手</h3><p class="tool-purpose">选中的作品，能找到下载入口。</p><p>先解决切换视频后仍识别上一条作品的问题，再修复列表下载按钮被面板裁切的问题。1.1.3 修复版将操作栏固定在面板底部，勾选作品后就能看到“下载已选”。</p><ul class="tool-features"><li>优先识别当前弹窗中的视频</li><li>列表操作栏保持可见，保留作品选择</li><li>独立修复脚本、测试与说明</li></ul><p class="tool-links"><a href="https://github.com/paulussamvel-lang/douyin-downloader-fix">查看修复工具与更新记录</a></p><p class="tool-credit">基于 snowflake-hangdudu 的插件进行修复实践；1.1.3 为本地修复版编号。开源内容为我编写的修复脚本、测试和说明。</p></div>
-      <figure class="tool-shot"><a href="assets/tools/douyin-list-1.1.3.webp" aria-label="查看抖音下载助手1.1.3列表下载截图"><img src="assets/tools/douyin-list-1.1.3.webp" alt="抖音下载助手1.1.3修复版列表界面，已勾选3个作品，底部完整显示下载已选3个按钮" loading="lazy" width="1537" height="733"></a><figcaption>列表与下载入口，一起留在面板里<span>1.1.3 修复版 · 点击查看大图</span></figcaption></figure>
+    <article class="tool-project tool-index" id="douyin-downloader" aria-labelledby="douyin-downloader-title">
+      <div class="tool-index-copy"><h3 id="douyin-downloader-title">抖音下载助手</h3><p class="tool-purpose">选中的作品，能找到下载入口。</p><p class="tool-links"><a href="https://github.com/paulussamvel-lang/douyin-downloader-fix">查看修复工具与更新记录</a></p><details class="tool-details"><summary>功能与制作说明</summary><div><p>先解决切换视频后仍识别上一条作品的问题，再修复列表下载按钮被面板裁切的问题。1.1.3 修复版将操作栏固定在面板底部，勾选作品后就能看到“下载已选”。</p><ul class="tool-features"><li>优先识别当前弹窗中的视频</li><li>列表操作栏保持可见，保留作品选择</li><li>独立修复脚本、测试与说明</li></ul></div></details><p class="tool-credit">基于 snowflake-hangdudu 的插件进行修复实践；1.1.3 为本地修复版编号。开源内容为我编写的修复脚本、测试和说明。</p></div>
+      <figure class="tool-shot"><a href="assets/tools/douyin-list-1.1.3.webp" aria-label="查看抖音下载助手1.1.3列表下载截图"><span class="tool-crop tool-crop-downloader" style="--crop-ratio:406/264;--shot-width:3.785714;--shot-x:-66.233%;--shot-y:-29.468%"><img src="assets/tools/douyin-list-1.1.3.webp" alt="抖音下载助手的作品勾选列表和底部下载按钮" loading="lazy" width="1537" height="733"></span></a><figcaption>列表与下载入口，一起留在面板里<span>1.1.3 修复版 · 点击查看大图</span></figcaption></figure>
     </article>
   </section>
   <section class="work wrap section" id="work" aria-labelledby="work-title">
@@ -136,7 +139,7 @@
   </section>
   <section class="about wrap section" id="about" aria-labelledby="about-title">
     <div class="section-heading"><h2 id="about-title">关于我</h2><p>作品之外，还有生活。</p></div>
-    <div class="about-intro"><h3>慢热，爱观察。<br>熟悉以后，也爱张罗。</h3><div><p>我是王浩，也叫 Paulus，来自天津，毕业于云南大学国际贸易专业。刚认识时，我通常先听、先观察；遇到有趣的事，又总想分享给身边的人。</p><p>我喜欢音乐、动漫和骑车，偶尔带孩子出门旅行。比起记录每一刻，我更喜欢投入当下，也乐意花时间把一件新鲜事学明白。</p></div></div>
+    <div class="about-intro"><h3>慢热，爱观察。<br><span class="keep-phrase">熟悉以后，</span><wbr><span class="keep-phrase">也爱张罗。</span></h3><div><p>我是王浩，也叫 Paulus，来自天津，毕业于云南大学国际贸易专业。刚认识时，我通常先听、先观察；遇到有趣的事，又总想分享给身边的人。</p><p>我喜欢音乐、动漫和骑车，偶尔带孩子出门旅行。比起记录每一刻，我更喜欢投入当下，也乐意花时间把一件新鲜事学明白。</p></div></div>
     <section class="activity-story" id="activities" aria-labelledby="activities-title">
     <div class="life-heading"><h3 id="activities-title">青年活动与志愿参与</h3><div><p>以前，我和几位伙伴一起组织青年团体，每月策划一两场活动。从十几人的小聚，到三四十人的相聚，留下了许多热闹的回忆。</p><p>活动里有户外游戏、团队协作，也有养老院探访与陪伴互动。这些照片，记录了我们一起参与、一起做事的时刻。</p></div></div>
     <div class="activity-gallery">
@@ -147,7 +150,7 @@
     </div>
     </section>
     
-    <div class="contact"><p>关于作品，或一个有趣的新想法，欢迎联系。</p><a href="tel:13821807142">138 2180 7142</a></div>
+    <div class="contact"><p>关于作品，或一个有趣的新想法，欢迎联系。</p><a href="https://github.com/paulussamvel-lang">GitHub 主页</a></div>
   </section>
     </div>
   </section>

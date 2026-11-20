@@ -10,10 +10,32 @@
   const status=library.querySelector('.recorder-status'),title=library.querySelector('.playback-title');
   const buttons=Object.fromEntries([...library.querySelectorAll('[data-deck]')].map(button=>[button.dataset.deck,button]));
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  const mobile=matchMedia('(max-width: 600px)');
+  const dockToggle=document.createElement('button');
+  dockToggle.type='button';dockToggle.className='dock-toggle';
+  dockToggle.setAttribute('aria-expanded','false');
+  dockToggle.setAttribute('aria-label','展开录像带导航');
+  library.querySelector('.tape-shelf').id='dock-tape-shelf';
+  library.querySelector('.recorder-controls').id='dock-recorder-controls';
+  dockToggle.setAttribute('aria-controls','dock-tape-shelf dock-recorder-controls');
+  dockToggle.innerHTML='<img src="assets/vhs/cassette.webp" width="40" height="20" alt=""><span class="dock-current">录像带导航</span><span class="dock-toggle-action">展开</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>';
+  consoleEl.prepend(dockToggle);
   const staticMode=new URLSearchParams(location.search).get('motion')==='off';
   const effects=new Set(),ghosts=new Set();
   let selected=-1,pending=-1,revision=0,paused=false,docked=false,frame=0,manualUntil=0,settleTimer;
   const instant=()=>reduced.matches||staticMode;
+  function setMobileOpen(open){
+    const next=Boolean(open&&mobile.matches&&docked);
+    library.classList.toggle('is-mobile-open',next);
+    dockToggle.setAttribute('aria-expanded',String(next));
+    dockToggle.setAttribute('aria-label',next?'收起录像带导航':'展开录像带导航');
+    dockToggle.querySelector('.dock-toggle-action').textContent=next?'收起':'展开';
+  }
+  dockToggle.addEventListener('click',()=>setMobileOpen(dockToggle.getAttribute('aria-expanded')!=='true'));
+  document.addEventListener('click',event=>{if(!consoleEl.contains(event.target))setMobileOpen(false);});
+  document.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&library.classList.contains('is-mobile-open')){setMobileOpen(false);dockToggle.focus({preventScroll:true});}
+  });
   function cancelMotion(){effects.forEach(effect=>effect.cancel());effects.clear();ghosts.forEach(ghost=>ghost.remove());ghosts.clear();}
   async function motion(element,frames,options){
     if(instant()||!element.animate)return;
@@ -37,11 +59,13 @@
     library.dataset.state=pending>=0?'loading':paused?'paused':selected>=0?'playing':'idle';
     display.textContent=pending>=0?'LOAD':paused?'PAUSE':selected>=0?'PLAY':'READY';
     const index=pending>=0?pending:selected;
+    dockToggle.querySelector('.dock-current').textContent=index<0?'录像带导航':tapes[index].dataset.title;
     status.textContent=index<0?'向下浏览，录像带会跟随内容自动切换。':(pending>=0?'正在装入：':paused?'联动已暂停 · ':'正在浏览：')+tapes[index].dataset.title;
     if(index>=0)title.textContent=tapes[index].dataset.title;
     updateControls();
   }
   function goTo(index,hash){
+    setMobileOpen(false);
     manualUntil=performance.now()+1800;
     const target=hash&&document.getElementById(hash.slice(1))||panels[index];
     target.scrollIntoView({behavior:instant()?'instant':'smooth',block:'start'});
@@ -53,7 +77,7 @@
     if(index===pending){if(scroll)goTo(index,hash);return;}
     if(index===selected&&pending<0){if(scroll)goTo(index,hash);return;}
     const ticket=++revision;cancelMotion();pending=index;paint();
-    if(animate&&!instant()){
+    if(animate&&!instant()&&!(mobile.matches&&docked&&!library.classList.contains('is-mobile-open'))){
       if(selected>=0){
         const old=ghostFor(selected),end=`translate(${old.x}px,${old.y}px) scale(${old.scale},.12)`;
         await motion(old.ghost,[{transform:end,opacity:0},{transform:'translate(0,0) scale(1)',opacity:1}],{duration:docked?140:230,easing:'ease-out'});
@@ -79,6 +103,7 @@
     const before=consoleEl.getBoundingClientRect();cancelMotion();
     if(next)space.style.height=before.height+'px';
     docked=next;library.classList.toggle('is-docked',next);
+    if(!next)setMobileOpen(false);
     if(!next)space.style.height='';
     const after=consoleEl.getBoundingClientRect();
     // One bounded FLIP transition; the placeholder keeps the reading position stable.
@@ -124,7 +149,7 @@
   window.addEventListener('wheel',()=>{manualUntil=0;},{passive:true});
   window.addEventListener('touchstart',()=>{manualUntil=0;},{passive:true});
   reduced.addEventListener('change',()=>{if(reduced.matches)cancelMotion();});
-  window.addEventListener('resize',()=>{cancelMotion();if(docked){library.classList.remove('is-docked');space.style.height=consoleEl.getBoundingClientRect().height+'px';library.classList.add('is-docked');}scheduleOnce();},{passive:true});
+  window.addEventListener('resize',()=>{setMobileOpen(false);cancelMotion();if(docked){library.classList.remove('is-docked');space.style.height=consoleEl.getBoundingClientRect().height+'px';library.classList.add('is-docked');}scheduleOnce();},{passive:true});
   document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelMotion();});
   panels.forEach(panel=>panel.hidden=false);screen.classList.add('has-content');library.classList.add('vhs-ready');paint();followHash();scheduleOnce();
   document.addEventListener('identity:ready',()=>{if(location.hash)followHash();scheduleOnce();},{once:true});

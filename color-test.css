@@ -1,0 +1,20 @@
+/* A warmer accent sampled in spirit from the VHS paper labels. */
+:root{
+  --surface:#191919;
+  --text:#f0eee9;
+  --muted:#b8b4ad;
+  --accent:#dac69d;
+  --line:rgba(240,238,233,.15);
+}
+html{scrollbar-color:#6a6255 var(--bg)}
+.header nav{color:var(--muted)}
+.vhs-ready .playback-screen{
+  background:#111113;
+  border-color:#3d3a35;
+}
+.playback-toolbar{background:#1b1a19}
+.playback-indicator{background:var(--accent)}
+.tape-state{color:var(--muted)}
+.vhs-tape[aria-pressed="true"] .tape-state,
+.vhs-tape.is-loading .tape-state{color:var(--accent)}
+.vhs-library:not(.is-docked) .vhs-tape[aria-pressed="true"]:not(.is-loading) .tape-face{opacity:1}

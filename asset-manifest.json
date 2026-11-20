@@ -62,16 +62,18 @@
   "assets/youth/outdoor-activity.jpg": "f4248d5b03b079e1c7823b3cb56958e33a5319dbeba1995042b598f985520b77",
   "identity-scroll.js": "ec82d010d43f2b7a5f3f3beb205141eed64d5dce38e930563555a105ec86719f",
   "identity-timeline.js": "94f820d5ec3cb8a092f25008c8065d770834581c5b4aa620286df8a4f6fd4643",
-  "index.html": "88c3d30b21deda73389f78c3a89546d64d06d2428f978a2558efd0c8e9a0ffc7",
+  "index.html": "49f967d5a6df10070b5431b41c9ccd1ec09138e8eb1eb537009e39abc12bec66",
   "script.js": "2719eecd33f6ce733be775d8dbe4e913a0d65f50dfa2926bf75e2ad3d8310107",
-  "styles.css": "d8afa144d7ba16f7387f8193758fe988f7c8b73b54bf48f37d1faa775a0e26b7",
-  "vhs-library.css": "59c977daf397a00b41d781b41b307eddb392169acf0d87ee6dcbfb4d34691b5d",
-  "vhs-library.js": "2b0eb030bd0ddfe3583f8382413fa9e4facd90eaf0c1b5d89cac54da9964b731",
+  "styles.css": "238dfb7885896afeaa68a2faa4b61163b878a09dd155cfdbb6ea0504db1ac60a",
+  "vhs-library.css": "68e0bc5e4fde6d73a5c003da3007b56478b5491d0716249e45be9543688be7d3",
+  "vhs-library.js": "8342598c6bfc14fac505749606908ce4c1e631296053787a3643e2dc429c5672",
   "assets/account/haoqi-account-20261115.jpg": "399b0aa9488415982a5dd746a72e560e10b96e7b89e9f329d2329e3dd6e50bb3",
   "assets/tools/zhenxia-20261115.jpg": "31900b9a8dcff8c698fcad86b27f87083a09785068cb597f54fb75e6d73ecd88",
   "assets/tools/paul-workbench-20261115.jpg": "1cef6d2eb727596d950d8e4d86b281378307298a0dd00266f80673ce85e64d20",
   "assets/paulus/portrait-relaxed-20261115.jpg": "7c94ae4c9915eca82bdbc8d81f06de510c34e2a953e24cbb537bb0871ae5edda",
   "assets/account/haoqi-account-clean-20261115.jpg": "800360ca3b8debca2b42ced36612f5f441b0f26a24b51266e034da5eb6a49380",
   "assets/tools/zhenxia-panel-20261115.png": "9c57f0d5a161c360c3f6e225ab563c33d115aafc91007a7307a3a61615c5d79e",
-  "assets/tools/zhenxia-panel-20261115.html": "f98a0f6817085885e8fb7d09543a3eba5f29bd79f81f01ec08b750d2aa7b693a"
+  "assets/tools/zhenxia-panel-20261115.html": "f98a0f6817085885e8fb7d09543a3eba5f29bd79f81f01ec08b750d2aa7b693a",
+  "tools-showcase.css": "2570b6df50dce20b6e19e7bb32b10d10a6031e3f67d0257cf3f8405dc57a23b0",
+  "color-test.css": "82528afb1cd13ce07734269517bdb935f73806338b6d842359a594f6c050abe1"
 }

@@ -170,3 +170,59 @@ body>.header{position:absolute;left:0;right:0;top:0;z-index:10}
 /* Preserve the supplied screenshot pixels; clip only the rounded window corners. */
 #zhenxia .tool-shot a{background:transparent;border-radius:0;overflow:visible}
 #zhenxia .tool-shot img{clip-path:inset(0 round 3.7% / 4.85%);border-radius:0}
+
+/* Keep short editorial phrases together instead of leaving single characters. */
+.keep-phrase{white-space:nowrap}
+.about-intro h3{font-size:clamp(26px,2.6vw,32px);line-height:1.5}
+.section-heading>p,.tool-purpose,figcaption{text-wrap:pretty}
+
+.identity-story.sequence-ready{height:300svh}
+.identity-bio,.sequence-ready .identity-bio{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:16px;
+}
+.identity-summary{
+  max-width:18em;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
+  text-wrap:pretty;
+}
+.identity-footer .identity-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:0 16px;
+  border-radius:8px;
+  color:var(--bg);
+  background:var(--accent);
+  font-size:14px;
+  font-weight:600;
+  white-space:nowrap;
+}
+.identity-footer .identity-primary:hover{background:var(--text)}
+.identity-footer .identity-links>a:not(.identity-primary){
+  display:inline-flex;
+  align-items:center;
+  min-height:44px;
+  font-size:13px;
+  white-space:nowrap;
+}
+@media(max-width:900px){
+  .sequence-ready .identity-intro{padding-top:clamp(60px,12svh,104px)}
+}
+@media(max-width:600px){
+  .identity-summary{font-size:14px}
+  .identity-bio,.sequence-ready .identity-bio{gap:12px}
+  .identity-footer{gap:12px;align-items:center}
+  .identity-footer .scroll-invitation{font-size:12px;line-height:1.4}
+  .identity-footer .scroll-invitation svg{flex:none;width:12px;height:16px}
+  .identity-footer .identity-links{gap:10px}
+  .identity-footer .identity-primary{padding-inline:12px;font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){
+  .identity-story.sequence-ready{height:auto}
+}
